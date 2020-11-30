@@ -1,0 +1,144 @@
+.all {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #e8eaf6;
+       font-family: consolas;
+  }
+ .all h1 {
+    font-family: "Martel Sans";
+    font-size: 3em;
+    color: rgb(100, 131, 192);
+    margin: 0px !important;
+    background-color: #e8eaf6;
+  }
+  .profile {
+    align-items: center;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    background-color: #e8eaf6;
+  }
+  
+  .profile .card {
+    position: relative;
+    cursor: pointer;
+    background-color: #e8eaf6;
+    border-color: #e8eaf6;
+  }
+  
+  .profile .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+  }
+  
+  .profile .card .face.face1 {
+    position: relative;
+    background: #e8eaf6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .profile .card:hover .face.face1 {
+    background: #9fa8da;
+    transform: translateY(0);
+  }
+  
+  .profile .card .face.face1 .content {
+    transition: 0.5s;
+    justify-content: center;
+  }
+  
+  .profile .card .face.face1 .content img {
+    max-width: 100px;
+  }
+  .profile .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .profile .card:hover .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .profile .card .face.face2 .content {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .profile .card .face.face2 {
+    position: relative;
+    background: #9fa8da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px #9fa8da;
+    transform: translateY(-100px);
+  }
+  .profile .card .face.face2 .content h4 {
+    font-size: 1em;
+  }
+  
+  .profile .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+  
+  .profile .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+  }
+  
+  .profile .card .face.face2 .content a:hover {
+    background: #333;
+    color: #e8eaf6;
+  }
+  .modal-content input {
+    border-color: rgb(100, 131, 192);
+  }
+  #formGridState {
+    width: 230px;
+    border-color: rgb(100, 131, 192);
+  }
+  .modal-title.h4 {
+    font-family: "Martel Sans";
+    color: rgb(100, 131, 192);
+    font-weight: 600;
+  }
+  .travel h3 {
+    font-size: 15px;
+    color: rgb(231, 83, 83);
+    font-weight: 700;
+  }
+  .calendar {
+    font-size: 15px;
+    width: 300px;
+    margin-left: 70px;
+  }
+  
+  .btn {
+    background-color: rgb(100, 131, 192) !important;
+    border-color: rgb(100, 131, 192) !important;
+  }
+  

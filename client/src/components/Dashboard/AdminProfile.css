@@ -1,0 +1,205 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #d8d6d8;
+  margin: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+h1.section-title.h1 {
+  font-family: "Martel Sans";
+  font-size: 2.5em;
+  margin: 10px 20px;
+  color: rgb(100, 131, 192);
+  width: auto;
+}
+.modal-content input {
+  border-color: rgb(100, 131, 192);
+}
+#formGridState {
+  width: 230px;
+  border-color: rgb(100, 131, 192);
+}
+.modal-title.h4 {
+  font-family: "Martel Sans";
+  color: rgb(100, 131, 192);
+  font-weight: 600;
+}
+.travel h3 {
+  font-size: 15px;
+  color: rgb(231, 83, 83);
+  font-weight: 700;
+  margin-left: -10px;
+}
+.calendar {
+  font-size: 15px;
+  width: 300px;
+  margin-left: 70px;
+}
+.btn {
+  background-color: rgb(100, 131, 192) !important;
+  border-color: rgb(100, 131, 192);
+}
+
+.add_btn,
+.logout_btn,
+.stat_btn {
+  margin: 10px;
+}
+
+.stat_out {
+  margin-left: 800px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.snip1336 {
+  font-family: "Roboto", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: rgb(100, 131, 192);
+}
+.snip1336 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1336 img {
+  max-width: 50%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+.snip1336 figcaption {
+  width: 100%;
+  background-color: rgb(100, 131, 192);
+  padding: 10px 10px 0px 10px;
+  position: relative;
+  justify-content: center;
+}
+.snip1336 figcaption:before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #141414;
+}
+.snip1336 figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.snip1336 figcaption a:hover {
+  opacity: 1;
+}
+.snip1336 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px #141414;
+}
+
+.snip1336 h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+.snip1336 h3 {
+  font-size: 1em;
+  color: #141414;
+  font-weight: bold;
+}
+/* .form-label {
+  margin-top: 10px;
+  margin-bottom: 0px;
+} */
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.search {
+  width: 24em;
+  margin-left: 20px;
+}
+.search .field {
+  position: relative;
+}
+.search label {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAxElEQVR4AXXPIUuDcRDA4Zv4AUSwTLEKVoNlySyCYLO98CCsahGrX0AW/QhmBRHEJghLS4JFBBXDgrJi2In78w8v4v3S8XDh4nd0DTxLEzd2RC2EnrH07trQVDrXqbhs7FvfnBDWDKWTigOpL2oWvZpYKPjio1zVHEt7BdOtaLUtHRX8MmqjRjooeCVttPBOWi+4JT1aLaDjVLpU/5ytn840Dj1IaWSpYmi8yVlTF54qh9K8nn27usJK5fC3yvfhPx7a/AE9dYwDEfKrlAAAAABJRU5ErkJggg==)
+    no-repeat 0 50%;
+  color: #b2b2b2;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  transition: left 0.4s, transform 0.4s;
+  padding-left: 1.2em;
+}
+.search .input-search {
+  border: 1px solid #dfdfdf;
+  border-radius: 0.25em;
+  box-shadow: 0 1px 0 #bfbebf;
+  display: block;
+  font: 400 1em/1.5em sans-serif;
+  padding: 0.5em 1.75em;
+  width: 100%;
+}
+.search .input-search:focus + label,
+.search .input-search:valid + label {
+  left: -0.5em;
+  transform: translate(0, -50%);
+}
+.search .input-search:valid + label {
+  text-indent: -9999px;
+}
+.filter {
+  margin-left: 25%;
+  margin-bottom: 25px;
+  display: flex;
+}
+label {
+  margin-left: 18px;
+  font-size: larger;
+  font-weight: 900;
+  color: black;
+}
+label input {
+  margin-left: 5px;
+}
+@media (max-width: 1199.98px) {
+  .stat_out {
+    display: flex;
+    margin-left: auto;
+  }
+}
