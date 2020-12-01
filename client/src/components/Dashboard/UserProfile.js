@@ -5,34 +5,43 @@ import { Col } from 'reactstrap';
 import {Calendar} from "react-calendar"
 import { IconContext } from "react-icons";
 import {FaEdit} from "react-icons/fa"
-import "./UserProfile.css"
+import "./CSS/UserProfile.css"
 import { useDispatch } from "react-redux";
+import { editUser } from "../../Redux/actions/authActions";
+var moment = require('moment');
 
 
 
 const UserProfile=({user,logout})=> {
+
     const dispatch = useDispatch();
+
     const [newUser, setNewUser] = useState({
-        name: "",
-        phone: "",
-        email: "",
-          });
-const [reason, setReason] = useState("")
-const [date, setDate] = useState(new Date());
+        name: user.name,
+        phone: user.phone,
+        email: user.email,
+        reason:user.reason });
 
-
-const onChange = date =>{
-    setDate(date);
-};    
 const [show, setShow] = useState(false);
+
+
+    
+
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
+
+
 const handleChange = (event) => {
     const { name, value } = event.target;
     setNewUser({
         ...newUser,
         [name]: value,
     });
+};
+
+const handleConfirm = () => {
+  dispatch(editUser(user._id, newUser));
+  handleClose()
 };
 
 
@@ -59,7 +68,7 @@ const handleChange = (event) => {
             <h4>reason: {user.reason}</h4>
             { user.reason === "Travelling"? 
    <div className="travel">
-     <h4>travel date :{user.travel_date}</h4></div>
+     <h4>travel date :{ moment(user.travel_date).format('dddd, MMMM Do YYYY')}</h4></div>
    :null}
           
                              </div>
@@ -100,32 +109,32 @@ const handleChange = (event) => {
               </Modal.Header>
               <Modal.Body>
  <InputGroup size="sm" className="mb-3">
-       <FormControl placeholder="Name"  onChange={handleChange} value={user.name} name="name"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  />
-       <FormControl placeholder=" Email"  onChange={handleChange} value={user.email} name="email" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+       <FormControl placeholder="Name"  onChange={handleChange} value={newUser.name} name="name"  aria-label="Small" aria-describedby="inputGroup-sizing-sm"  />
+       <FormControl placeholder=" Email"  onChange={handleChange} value={newUser.email} name="email" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
   </InputGroup>
   <br />
   <InputGroup size="sm" className="mb-3">
-       <FormControl placeholder="Phone"  onChange={handleChange} value={user.phone} name="phone" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+       <FormControl placeholder="Phone"  onChange={handleChange} value={newUser.phone} name="phone" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
        <Form.Row>
         <Form.Group as={Col} controlId="formGridState">
-      <Form.Control as="select" onChange={(e)=>{const x= e.target.value; setReason(x); }}>
+      <Form.Control as="select" value={newUser.reason} onChange={(e)=>{const x= e.target.value; setNewUser({...newUser,reason:x})}}>
         <option value="Severe Symptoms" >Severe Symptoms</option>
         <option value="Case of doubt">Case of doubt</option>
         <option value="Travelling"  >Travelling</option>
       </Form.Control>
     </Form.Group>
     </Form.Row>
-   { reason === "Travelling"? 
+   { user.reason === "Travelling"? 
    <div className="travel">
      <h3 >Date of Travel</h3>
-   <Calendar className='calendar'  onChange={onChange} name="date" value={user.date}  /></div>
+   <Calendar className='calendar'   name="date" value={user.date}  /></div>
    :null}
          </InputGroup>  
         
 </Modal.Body>
               <Modal.Footer>
                 <Link>
-                <Button variant="primary" onClick={handleClose}>
+                <Button variant="primary" onClick={handleConfirm}>
                   Save Changes
                 </Button>
                 </Link>

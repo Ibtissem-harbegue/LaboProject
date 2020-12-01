@@ -16,13 +16,16 @@ import { getAuthUser } from "./Redux/actions/authActions";
 function App() {
  const { isAuth } = useSelector((state) => state.authReducer);
  const { token } = useSelector((state) => state.authReducer);
+ const { isLoading } = useSelector((state) => state.authReducer);
  const dispatch = useDispatch();
  const getUser = () => dispatch(getAuthUser());
  
  useEffect(() => {
   if (token){
    getUser();
+  
  }}, [token,dispatch]);
+ 
 
 
  
@@ -30,7 +33,6 @@ function App() {
   return (
   
   
-    
       
     <BrowserRouter>
             

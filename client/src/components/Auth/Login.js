@@ -32,7 +32,7 @@ import { useHistory,Link } from "react-router-dom";
 
        return (
          <>
-          <img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/>
+          <Link to='/'><img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
       <h1 className="log">Log In</h1>
     <div className="login-form-container">
       <div  className="login-form">

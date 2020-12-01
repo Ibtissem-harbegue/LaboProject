@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout} from "../../Redux/actions/authActions";
 import { getAllUsers } from "../../Redux/actions/authActions";
-import DashboardAdmin from './DashboardAdmin';
-import DashboardPatient from './DashboardPatient';
+
 import AdminProfile from './AdminProfile';
 import UserProfile from './UserProfile'
 function Dashboard() {

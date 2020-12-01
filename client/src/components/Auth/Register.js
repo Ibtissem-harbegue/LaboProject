@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { useHistory,Link } from "react-router-dom";
 import { register } from "../../Redux/actions/authActions";
 
+
  const Register =() =>{
   const history = useHistory();
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ import { register } from "../../Redux/actions/authActions";
        return (
     <div className="register-form-container">
       <div  className="register-form">
-      <img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/>
+     <Link to='/'><img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
       <h1>Create your account!</h1>
     <Form>
   <Form.Row>

@@ -105,7 +105,7 @@ router.post("/register",registerRules(),validator, async (req, res) => {
 
 //Update user
 
-router.put("/:_id",isAuth,isAuthAdmin, (req, res) => {
+router.put("/:_id",isAuth, (req, res) => {
   let { _id } = req.params;
   User.findByIdAndUpdate({ _id }, { $set: { ...req.body } })
     .then(() => res.send("updated success"))

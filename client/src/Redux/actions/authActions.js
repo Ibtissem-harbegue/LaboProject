@@ -108,6 +108,18 @@ export const getAllUsers = () => async (dispatch) => {
     });
   }
 };
+export const deleteUser = (id) => (dispatch) => {
+  axios
+    .delete(`/api/${id}`)
+    .then((res) => dispatch(getAllUsers()))
+    .catch((err) => console.log(err));
+};
+export const editUser = (id, editContact) => (dispatch) => {
+  axios
+    .put(`/api/${id}`, editContact)
+    .then((res) =>dispatch(getAllUsers()) )
+    .catch((err) => console.log(err));
+};
 export const logout = () => (dispatch) => {
   dispatch({
     type: LOGOUT,

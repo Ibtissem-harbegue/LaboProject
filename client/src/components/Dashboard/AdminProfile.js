@@ -11,8 +11,9 @@ import {FaEdit} from "react-icons/fa"
 import {RiLogoutBoxRLine} from "react-icons/ri"
 import {AiOutlineUserAdd} from "react-icons/ai"
 import {FcStatistics} from "react-icons/fc"
-import "./AdminProfile.css"
+import "./CSS/AdminProfile.css"
 import { useDispatch } from "react-redux";
+import { deleteUser} from "../../Redux/actions/authActions";
 
 const AdminProfile = ({setSearch,users,logout}) => {
   // const dispatch = useDispatch();
@@ -144,7 +145,9 @@ Not yet
   <FaEdit /*onClick={(e)=>{history.push("/edit/users/:id")}}*/  style = { {marginLeft:"200px"}} />
 </IconContext.Provider >   
      <IconContext.Provider  value={{ color: "red", className: "trash", size:"2em" }}>
-  <GoTrashcan  /*onClick={()=>dispatch(remove(user.id))}*/ />
+  <GoTrashcan  onClick={()=>dispatch(deleteUser(user._id))} />
+  
+  
 </IconContext.Provider>
 </div>
     </figure>
