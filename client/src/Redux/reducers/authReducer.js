@@ -22,7 +22,7 @@ import {
     
   };
   
-  export default function (state = initState, { type, payload }) {
+  export default function authReducer(state = initState, { type, payload }) {
     switch (type) {
       case SET_LOADING:
         return { ...state, isLoading: true };

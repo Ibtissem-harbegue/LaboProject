@@ -22,11 +22,11 @@ function Home() {
             <div className="section-third">
                 <div className="show">
                     <div className="title">
-                        <h2 className="landing-title">Prendre rendez-vous RT-PCR</h2>
+                        <h2 className="landing-title">Book a Covid Test Online</h2>
                          <p className="landing-min">Let us help YOU. <br/>
                             In a world gripped by the effects of the <span style={{color: "red"}}>COVID-19 </span>pandemic  it has never been more important for those with both chronic and new health concerns to be able to access reliable laboratory tests from the comfort and the safety of their own home. <br/> This website enables you to order private <span style={{color: "red"}}>COVID-19 PCR</span> tests online. </p></div></div><a className="register-button" href="/register">Register</a></div>
         <div className="section-third">
-            <img style={{width:"570px", height:"300px"}} src={"./pale-virus-test.png"}alt="corona"/>
+            <img style={{width:"570px", height:"300px"}} src={"https://www.kxan.com/wp-content/uploads/sites/40/2020/08/GettyImages-1222940363.jpg?w=960&h=540&crop=1"}alt="corona"/>
             </div>
     </section>
     <div className="footer">

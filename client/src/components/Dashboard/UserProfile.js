@@ -15,12 +15,16 @@ var moment = require('moment');
 const UserProfile=({user,logout})=> {
 
     const dispatch = useDispatch();
-
+    const [date, setDate] = useState(new Date())
     const [newUser, setNewUser] = useState({
         name: user.name,
         phone: user.phone,
         email: user.email,
-        reason:user.reason });
+        reason:user.reason,
+        travel_date:user.travel_date,
+        test_date:user.test_date,
+        result_date:user.result_date
+       });
 
 const [show, setShow] = useState(false);
 
@@ -29,6 +33,12 @@ const [show, setShow] = useState(false);
 
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
+const onChange =(date) =>{
+  setDate(date);
+  setNewUser({...newUser,travel_date:date})
+  
+
+};
 
 
 const handleChange = (event) => {
@@ -38,6 +48,7 @@ const handleChange = (event) => {
         [name]: value,
     });
 };
+
 
 const handleConfirm = () => {
   dispatch(editUser(user._id, newUser));
@@ -115,20 +126,8 @@ const handleConfirm = () => {
   <br />
   <InputGroup size="sm" className="mb-3">
        <FormControl placeholder="Phone"  onChange={handleChange} value={newUser.phone} name="phone" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
-       <Form.Row>
-        <Form.Group as={Col} controlId="formGridState">
-      <Form.Control as="select" value={newUser.reason} onChange={(e)=>{const x= e.target.value; setNewUser({...newUser,reason:x})}}>
-        <option value="Severe Symptoms" >Severe Symptoms</option>
-        <option value="Case of doubt">Case of doubt</option>
-        <option value="Travelling"  >Travelling</option>
-      </Form.Control>
-    </Form.Group>
-    </Form.Row>
-   { user.reason === "Travelling"? 
-   <div className="travel">
-     <h3 >Date of Travel</h3>
-   <Calendar className='calendar'   name="date" value={user.date}  /></div>
-   :null}
+      
+ 
          </InputGroup>  
         
 </Modal.Body>

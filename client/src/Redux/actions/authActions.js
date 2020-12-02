@@ -108,16 +108,27 @@ export const getAllUsers = () => async (dispatch) => {
     });
   }
 };
-export const deleteUser = (id) => (dispatch) => {
+export const deleteUser = (_id) => (dispatch) => {
+  const options = {
+    headers: {
+      authorization: localStorage.getItem("token"),
+    },
+  };
   axios
-    .delete(`/api/${id}`)
+    .delete(`/api/${_id}`,options)
     .then((res) => dispatch(getAllUsers()))
     .catch((err) => console.log(err));
 };
-export const editUser = (id, editContact) => (dispatch) => {
+
+export const editUser = (_id, editContact) => (dispatch) => {
+  const options = {
+    headers: {
+      authorization: localStorage.getItem("token"),
+    },
+  };
   axios
-    .put(`/api/${id}`, editContact)
-    .then((res) =>dispatch(getAllUsers()) )
+    .put(`/api/${_id}`, editContact,options)
+    .then((res) =>dispatch(getAuthUser()) )
     .catch((err) => console.log(err));
 };
 export const logout = () => (dispatch) => {

@@ -91,6 +91,7 @@ router.post("/register",registerRules(),validator, async (req, res) => {
     res.status(200).send({ user: req.user });
   });
 
+
   //get all patients
 
   router.get('/profiles',isAuth,isAuthAdmin, async (req, res) => {

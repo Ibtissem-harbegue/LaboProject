@@ -7,7 +7,8 @@ import Login from "./components/Auth/Login";
 import Dashboard from './components/Dashboard/Dashboard';
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { getAuthUser } from "./Redux/actions/authActions";
+import { getAuthUser,getAllUsers } from "./Redux/actions/authActions";
+
 
 
 
@@ -16,7 +17,9 @@ import { getAuthUser } from "./Redux/actions/authActions";
 function App() {
  const { isAuth } = useSelector((state) => state.authReducer);
  const { token } = useSelector((state) => state.authReducer);
- const { isLoading } = useSelector((state) => state.authReducer);
+ const { isAdmin } = useSelector((state) => state.authReducer);
+    
+ 
  const dispatch = useDispatch();
  const getUser = () => dispatch(getAuthUser());
  
@@ -25,7 +28,12 @@ function App() {
    getUser();
   
  }}, [token,dispatch]);
- 
+ const getUsers = () => dispatch(getAllUsers());
+ useEffect(() => {
+  if(isAdmin===1){
+     getUsers()
+}}
+,[token, isAdmin, dispatch])
 
 
  
@@ -41,6 +49,7 @@ function App() {
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
      
+      
     </Switch>
   </BrowserRouter>
      
