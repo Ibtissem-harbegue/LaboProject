@@ -23,7 +23,8 @@ const UserProfile=({user,logout})=> {
         reason:user.reason,
         travel_date:user.travel_date,
         test_date:user.test_date,
-        result_date:user.result_date
+        result_date:user.result_date,
+        age:user.age
        });
 
 const [show, setShow] = useState(false);
@@ -74,9 +75,10 @@ const handleConfirm = () => {
             <div className="face face2">
               <div className="content">
     <h4>name: {user.name}</h4>
-            <h4>email: {user.email}</h4>
-            <h4>phone: {user.phone}</h4>
-            <h4>reason: {user.reason}</h4>
+            <h4>Email: {user.email}</h4>
+            <h4>Phone: {user.phone}</h4>
+            <h4>Age: {user.age} years old</h4>
+            <h4>reason: {user.reason} </h4>
             { user.reason === "Travelling"? 
    <div className="travel">
      <h4>travel date :{ moment(user.travel_date).format('dddd, MMMM Do YYYY')}</h4></div>
@@ -126,7 +128,7 @@ const handleConfirm = () => {
   <br />
   <InputGroup size="sm" className="mb-3">
        <FormControl placeholder="Phone"  onChange={handleChange} value={newUser.phone} name="phone" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
-      
+       <FormControl placeholder="age"  onChange={handleChange} value={newUser.age} name="age" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
  
          </InputGroup>  
         

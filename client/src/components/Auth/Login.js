@@ -26,8 +26,7 @@ import { useHistory,Link } from "react-router-dom";
   
   const handleConfirm = () => {
     dispatch(login(newUser));
-    history.push('/')
-   
+    history.push('/')   
   };
 
        return (

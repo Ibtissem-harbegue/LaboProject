@@ -8,6 +8,7 @@ const user = new schema({
   name: { type: String, required: [true,"Please enter your name"] },
   password: { type: String, required: [true,"Please enter your password"] },
   email: { type: String, required: [true,"Please enter your password"] },
+  age: { type: Number, required: [true,"Please enter your age"] },
   phone: { type: Number,required:true},
   reason:{ type: String,required:[true,"Please enter your reason"] },
   travel_date :{ type: String,required:false },

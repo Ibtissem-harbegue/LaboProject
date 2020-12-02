@@ -26,7 +26,8 @@ import { register } from "../../Redux/actions/authActions";
     email: "",
     password: "",
     reason:reason,
-    travel_date:date
+    travel_date:date,
+    age:""
     
 
   });
@@ -90,6 +91,10 @@ import { register } from "../../Redux/actions/authActions";
         <option value="Case of doubt">Case of doubt</option>
         <option value="Travelling"  >Travelling</option>
       </Form.Control>
+    </Form.Group>
+    <Form.Group as={Col} controlId="formGridPhone">
+      <Form.Label>age</Form.Label>
+      <Form.Control type="text" placeholder="Enter your age" onChange={handleChange}  name="age" />
     </Form.Group>
     </Form.Row>
    { reason === "Travelling"? 

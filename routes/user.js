@@ -12,7 +12,7 @@ const secretOrKey = config.get('secretOrKey');
 //register
 
 router.post("/register",registerRules(),validator, async (req, res) => {
-    const { name, email, password,reason,phone,travel_date } = req.body;
+    const { name, email, password,reason,phone,travel_date,age } = req.body;
     try {
         //find if the user already exists
         let user = await User.findOne({ email });
@@ -27,7 +27,8 @@ router.post("/register",registerRules(),validator, async (req, res) => {
           password,
           reason,
           phone,
-          travel_date
+          travel_date,
+          age
         });
     
         //hash the password
