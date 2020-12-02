@@ -11,7 +11,7 @@ const connectDB = async () => {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       },
-      (err) => (err ? console.log(err) : console.log("mongoose is connected"))
+      (err) => (err ? console.log(err) : console.log("Database is connected"))
     );
   } catch (error) {
     console.log(error);
