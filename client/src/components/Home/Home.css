@@ -1,164 +1,162 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Martel Sans", serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-  }
-  @import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700;800&display=swap);
-  :root {
-    --bg-primary-landing: rgb(215, 235, 255);
-  }
-  
-  .landing-page {
-    overflow-x: hidden;
-    background-color: rgb(215, 235, 255) !important;
-    background-color: var(--bg-primary-landing) !important;
-    height: 100vh;
-  }
-  header.landing-header > nav.landing-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 2%;
-  }
-  
-  a.login-button {
-    margin: 20px 0;
-    background: rgb(100, 131, 192);
-    line-height: 1.1;
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-    transition: all 0.2s ease-in;
-    font-family: "Martel Sans";
-    padding: 0.7em 3em;
-    border-radius: 6px;
-  }
-  
-  a.login-button:hover {
-    -webkit-filter: contrast(1.5);
-    filter: contrast(1.5);
-    text-decoration: none;
-  }
- .lab {
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 30px;
-    font-size: 2em;
-    color: rgb(231, 83, 83);
-    margin-top: 30px;
-  }
-  
-  section.landing {
-    justify-content: center;
-    width: 100%;
-    margin: 0px 50px 0px 50px;
-  }
-  
-  section.landing .section-third {
-    margin: 30px 5px 0 5px;
-  }
-  
-  .title p {
-    font-size: 2em;
-    color: rgb(100, 131, 192);
-    font-weight: 900;
-    margin: 0;
-    font-family: "Martel Sans";
-  }
-  
-  .title .landing-min {
-    font-family: "Martel Sans";
-    line-height: 1.5;
-    width: 550px;
-    font-size: 1em;
-    color: #333;
-    margin: 10px;
-    position: relative;
-  }
-  
-  a.register-button {
-    margin: 20px 0;
-    background: rgb(100, 131, 192);
-    line-height: 1.1;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: all 0.2s ease-in;
-    font-family: "Martel Sans";
-    padding: 0.7em 3em;
-    position: absolute;
-    border-radius: 4px;
-  }
-  
-  div.footer {
-    display: flex;
-    background-color: rgb(215, 235, 255);
-    position: fixed;
-    z-index: 2;
-    bottom: 0;
-    width: 100%;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    font-family: "Martel Sans";
-  }
-  
-  h2.footer-message {
-    padding-top: 0.5%;
-    width: 70%;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    font-size: 90%;
-    text-decoration: none;
-    color: #333;
-    border-top-style: solid;
-    border-color: rgb(100, 131, 192);
-    border-width: 1.5px;
-    font-family: "Martel Sans";
-  }
-  
-  a {
-    text-decoration: none;
-    color: rgb(100, 131, 192);
-  }
-  
-  a.register-button:hover {
-    -webkit-filter: contrast(1.5);
-    filter: contrast(1.5);
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+@import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700;800&display=swap);
+:root {
+  --bg-primary-landing: rgb(215, 235, 255);
+}
 
+.landing-page {
+  overflow-x: hidden;
+  background-color: rgb(215, 235, 255) !important;
+  background-color: var(--bg-primary-landing) !important;
+  height: 100vh;
+}
+header.landing-header > nav.landing-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 2%;
+}
+
+a.login-button {
+  margin: 20px 0;
+  background: rgb(100, 131, 192);
+  line-height: 1.1;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  font-family: "Martel Sans";
+  padding: 0.7em 3em;
+  border-radius: 6px;
+}
+
+a.login-button:hover {
+  -webkit-filter: contrast(1.5);
+  filter: contrast(1.5);
+  text-decoration: none;
+}
+.lab {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 30px;
+  font-size: 2em;
+  color: rgb(231, 83, 83);
+  margin-top: 30px;
+}
+
+section.landing {
+  justify-content: center;
+  width: 100%;
+  margin: 0px 50px 0px 50px;
+}
+
+section.landing .section-third {
+  margin: 30px 5px 0 5px;
+}
+
+.title p {
+  font-size: 2em;
+  color: rgb(100, 131, 192);
+  font-weight: 900;
+  margin: 0;
+  font-family: "Martel Sans";
+}
+
+.title .landing-min {
+  font-family: "Martel Sans";
+  line-height: 1.5;
+  width: 550px;
+  font-size: 1em;
+  color: #333;
+  margin: 10px;
+  position: relative;
+}
+
+a.register-button {
+  margin: 20px 0;
+  background: rgb(100, 131, 192);
+  line-height: 1.1;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.2s ease-in;
+  font-family: "Martel Sans";
+  padding: 0.7em 3em;
+  position: absolute;
+  border-radius: 4px;
+}
+
+div.footer {
+  display: flex;
+  background-color: rgb(215, 235, 255);
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Martel Sans";
+}
+
+h2.footer-message {
+  padding-top: 0.5%;
+  width: 70%;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 90%;
+  text-decoration: none;
+  color: #333;
+  border-top-style: solid;
+  border-color: rgb(100, 131, 192);
+  border-width: 1.5px;
+  font-family: "Martel Sans";
+}
+
+a {
+  text-decoration: none;
+  color: rgb(100, 131, 192);
+}
+
+a.register-button:hover {
+  -webkit-filter: contrast(1.5);
+  filter: contrast(1.5);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  h2.footer-message {
+    padding-top: 2%;
   }
-  
-  @media screen and (max-width: 700px) {
-    h2.footer-message {
-      padding-top: 2%;
-    }
+}
+
+@media screen and (min-width: 800px) {
+  .landing-page {
+    overflow: hidden;
   }
-  
-  @media screen and (min-width: 800px) {
-    .landing-page {
-      overflow: hidden;
-    }
-    section.landing {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 3%;
-    }
-  
-    .section-third {
-      flex: 1 1 150px;
-    }
-    .section-third img {
-      position: absolute;
-      height: 60%;
-    }
-  
-    .title .landing-title {
-      font-size: 4vw;
-      width: 600px;
-      color: rgb(100, 131, 192);
-    }
+  section.landing {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
   }
+
+  .section-third {
+    flex: 1 1 150px;
+  }
+  .section-third img {
+    position: absolute;
+    height: 60%;
+  }
+
+  .title .landing-title {
+    font-size: 4vw;
+    width: 600px;
+    color: rgb(100, 131, 192);
+  }
+}
