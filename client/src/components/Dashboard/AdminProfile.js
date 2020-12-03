@@ -1,32 +1,40 @@
 import React,{useState} from 'react'
+
 // import {useDispatch, useSelector} from 'react-redux'
 // import axios from "axios"
 import { Button, Form} from "react-bootstrap"
 import { Col } from 'reactstrap';
 import { useHistory, Link } from "react-router-dom";
 
+
+
 import { IconContext } from "react-icons";
 import {GoTrashcan} from "react-icons/go"
-import {FaEdit} from "react-icons/fa"
 import {RiLogoutBoxRLine} from "react-icons/ri"
-
 import {FcStatistics} from "react-icons/fc"
-import "./CSS/AdminProfile.css"
 import { useDispatch } from "react-redux";
+
 import { deleteUser, getAllUsers,editUser } from "../../Redux/actions/authActions";
 
 
-const AdminProfile = ({setSearch,users,logout}) => {
+import "./CSS/AdminProfile.css"
+
+
+
+const AdminProfile = ({setSearch,users,logout,user}) => {
 
   const history = useHistory();
   const dispatch = useDispatch();
-        
+ 
+  
   const [value,setValue]=useState('All')
+
   const [status,setStatus]=useState('')
   
  
 
     
+
     return (
        <>
 
@@ -76,7 +84,10 @@ Not yet
 <div className="list">
 {(value==='All'?users:users.filter(el=>el.status===value)).map((user,id) =>
                <div   key={id}>
+
             <div className="card">
+
+
             <div className="face face1">
               <div className="content">
                        <IconContext.Provider  value={{ color: "red", className: "trash", size:"2em" }}>
@@ -84,7 +95,9 @@ Not yet
   </IconContext.Provider>
                 <img style={{width:"75px",borderRadius: "50px",marginTop: "-50px", marginLeft: "150px" }} src="https://image.shutterstock.com/z/stock-vector-blank-avatar-placeholder-on-transparent-background-1097191784.jpg" alt="profile-sample4" className="profile" />
             <h4 className="name">Name: {user.name}</h4>
+
             <h4>Result: {user.status} </h4>
+
             <h4>Reason: {user.reason} </h4>
             <h4>Test date: {user.test_date}</h4>
             <h4>Result date: {user.result_date}</h4>
@@ -97,12 +110,14 @@ Not yet
             <h4>Age: {user.age} years old</h4>
             <Form.Group as={Col} controlId="formGridState">
       <Form.Label>Result</Form.Label>
+
       <Form.Control as="select" value={user.status}   onChange={(e)=>{const x= e.target.value; setStatus(x)}} name="result">
         <option value="Not yet">Not yet</option>
         <option value="Positive">Positive</option>
         <option value="Negative"  >Negative</option>
       </Form.Control>
       <button onClick={()=>{dispatch(editUser(user._id,{status} ));dispatch(getAllUsers())}}>ok</button>
+
     </Form.Group> 
                         </div>
              </div>
@@ -112,9 +127,8 @@ Not yet
  </div>
        </section>
              </>
-       
-                        
+
     )
 }
 
-export default AdminProfile
+export default AdminProfile;
