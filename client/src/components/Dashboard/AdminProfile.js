@@ -99,8 +99,9 @@ Not yet
             <h4>Result: {user.status} </h4>
 
             <h4>Reason: {user.reason} </h4>
-            <h4>Test date: {user.test_date}</h4>
-            <h4>Result date: {user.result_date}</h4>
+
+            <h4 className={user.status!=='Not yet'?'description_task':''}>Test date: {user.test_date}</h4>
+            <h4 className={user.status!=='Not yet'?'description_task':''} >Result date: {user.result_date}</h4>
                        </div>
             </div>
             <div className="face face2">
