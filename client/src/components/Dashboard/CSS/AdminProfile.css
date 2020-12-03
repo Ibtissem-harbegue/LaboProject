@@ -18,14 +18,17 @@ h1.section-title.h1 {
   background-color: rgb(100, 131, 192) !important;
   border-color: rgb(100, 131, 192);
 }
-
+.top_btn,
 .logout_btn,
 .stat_btn {
   margin: 10px;
 }
 
 .stat_out {
-  margin-left: 800px;
+  margin-left: 900px;
+}
+.top_btn {
+  margin-left: 1260px;
 }
 .list {
   display: flex;
@@ -154,11 +157,22 @@ label input {
   transform: translateY(0);
 }
 
+.ok {
+  margin-left: 220px;
+}
+
+canvas.chartjs-render-monitor {
+  height: 530px !important;
+  width: auto;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
 @media (max-width: 1199.98px) {
   .stat_out {
     display: flex;
     margin-left: auto;
   }
 }
-.description_task{
-  text-decoration: line-through; } 
+.description_task {
+  text-decoration: line-through;
+}
