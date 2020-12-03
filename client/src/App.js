@@ -48,7 +48,7 @@ function App() {
     <Route exact path="/" component={isAuth?Dashboard:Home} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
-     
+      
       
     </Switch>
   </BrowserRouter>

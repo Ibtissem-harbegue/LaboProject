@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+
 import { logout} from "../../Redux/actions/authActions";
 
 
@@ -22,7 +22,7 @@ function Dashboard() {
             <UserProfile user={user} logout={logout}/>:<AdminProfile users={users.filter( 
                 user => user.name.toLowerCase().includes(search.toLowerCase().trim()) )} setSearch={setSearch} logout={logout}/>
            }
-           
+          
             
         </div>
     )
