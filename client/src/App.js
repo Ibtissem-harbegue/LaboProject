@@ -10,24 +10,18 @@ import { useDispatch } from "react-redux";
 import { getAuthUser,getAllUsers } from "./Redux/actions/authActions";
 
 
-
-
-
-
 function App() {
  const { isAuth } = useSelector((state) => state.authReducer);
  const { token } = useSelector((state) => state.authReducer);
  const { isAdmin } = useSelector((state) => state.authReducer);
-    
- 
  const dispatch = useDispatch();
  const getUser = () => dispatch(getAuthUser());
  
  useEffect(() => {
   if (token){
    getUser();
-  
- }}, [token,dispatch]);
+   }}, [token,dispatch]);
+
  const getUsers = () => dispatch(getAllUsers());
  useEffect(() => {
   if(isAdmin===1){
@@ -36,25 +30,14 @@ function App() {
 ,[token, isAdmin, dispatch])
 
 
- 
- 
-  return (
-  
-  
-      
-    <BrowserRouter>
-            
-    <Switch>
+   return (
+      <BrowserRouter>
+      <Switch>
     <Route exact path="/" component={isAuth?Dashboard:Home} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
-      
-      
-    </Switch>
-  </BrowserRouter>
-     
-    
-    
+      </Switch>
+  </BrowserRouter> 
   );
 }
 

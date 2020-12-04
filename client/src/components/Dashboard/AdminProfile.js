@@ -66,10 +66,7 @@ const AdminProfile = ({setSearch,users,logout}) => {
                   borderWidth: 4
               } ],
                             }
-
-        );
-                            
-            
+        );            
   }
   const options = {
       title:{
@@ -98,8 +95,7 @@ const AdminProfile = ({setSearch,users,logout}) => {
         },
         legend:{
          position : "right"
-        },
-           
+        },           
         }
   
 useEffect(() => {
@@ -108,7 +104,6 @@ useEffect(() => {
 
      return (
        <>
-
         <section id="team" className="pb-5 ">
            < div style ={{display:"flex", marginBottom:"35px"}}>
            <h1 className="section-title h1">Patients List</h1>
