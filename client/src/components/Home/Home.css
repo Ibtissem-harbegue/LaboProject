@@ -8,12 +8,20 @@
 :root {
   --bg-primary-landing: rgb(215, 235, 255);
 }
-
+section.landing p {
+  padding: 20px;
+  height: auto;
+  background-color: rgb(215, 235, 255) !important;
+  opacity: 0.8;
+  border-radius: 2%;
+}
 .landing-page {
-  overflow-x: hidden;
   background-color: rgb(215, 235, 255) !important;
   background-color: var(--bg-primary-landing) !important;
   height: 100vh;
+  background: url("https://www.kxan.com/wp-content/uploads/sites/40/2020/08/GettyImages-1222940363.jpg?w=960&h=540&crop=1");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header.landing-header > nav.landing-navbar {
   display: flex;
@@ -42,7 +50,7 @@ a.login-button:hover {
 }
 .lab {
   position: absolute;
-  margin-left: 100px;
+  margin-left: 130px;
   margin-top: 30px;
   font-size: 2em;
   color: rgb(231, 83, 83);
@@ -54,11 +62,6 @@ section.landing {
   width: 100%;
   margin: 0px 50px 0px 50px;
 }
-
-section.landing .section-third {
-  margin: 30px 5px 0 5px;
-}
-
 .title p {
   font-size: 2em;
   color: rgb(100, 131, 192);
