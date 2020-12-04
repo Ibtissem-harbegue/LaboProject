@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form} from "react-bootstrap"
+import {Form , Button} from "react-bootstrap"
 import { Col } from 'reactstrap';
 import "./RegisterLogin.css"
 import { login } from "../../Redux/actions/authActions";
@@ -31,9 +31,9 @@ import { useHistory,Link } from "react-router-dom";
 
        return (
          <>
-          <Link to='/'><img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
+    <div className="login_form">
+          <Link to='/'><img style={{margin:"0px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
       <h1 className="log">Log In</h1>
-    <div className="login-form-container">
       <div  className="login-form">
 
     <Form>
@@ -51,9 +51,11 @@ import { useHistory,Link } from "react-router-dom";
       </Form.Row>
      <div className="forgot-password">
             <Link className="forgotPasswordLink" to="/register">
-you don't have an account?  register</Link>
+You don't have an account?  register</Link>
           </div>
-     <button className="register-button"  onClick={handleConfirm}>Login</button>
+          <Button className="register-button" onClick={handleConfirm}> 
+               Login
+            </Button>
 </Form>
 </div>
     </div>

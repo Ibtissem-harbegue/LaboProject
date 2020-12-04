@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Form} from "react-bootstrap"
+import {Form,Button} from "react-bootstrap"
 import { Col } from 'reactstrap';
 import {Calendar} from "react-calendar"
 import 'react-calendar/dist/Calendar.css';
@@ -60,8 +60,8 @@ import { register } from "../../Redux/actions/authActions";
        return (
     <div className="register-form-container">
       <div  className="register-form">
-     <Link to='/'><img style={{width:"100px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
-      <h1>Create your account!</h1>
+     <Link to='/'><img style={{margin:"0px", height:"100px"}} src={"./flamenco-pandemic.png"} alt="corona"/></Link> 
+      <h1 className="log">Create your account!</h1>
     <Form>
   <Form.Row>
     <Form.Group as={Col} controlId="formGridName" >
@@ -105,9 +105,11 @@ import { register } from "../../Redux/actions/authActions";
     {/* { console.log(date.toString())} */}
     <div className="forgot-password">
             <Link className="forgotPasswordLink" to="/login">
-You already have an account?  login</Link>
+You already have an account?  login</Link> 
           </div>
-     <button className="register-button"  onClick={handleConfirm}>Register</button>
+          <Button className="register-button" onClick={handleConfirm}> 
+                Register
+            </Button>
 </Form>
 </div>
     </div>

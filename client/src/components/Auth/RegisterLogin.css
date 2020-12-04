@@ -1,89 +1,76 @@
-.register-form h1 {
-    font-family: "Martel Sans";
-    font-size: 3em;
-    margin: 30px;
-    color: rgb(100, 131, 192);
-  }
-  .log {
-    font-family: "Martel Sans";
-    font-size: 3em;
-    margin: 35px;
-    color: rgb(100, 131, 192);
-    font-weight: bold;
-    -webkit-text-stroke: 1px rgb(60, 90, 243);
-  }
-  Form {
-    width: 80%;
-   margin: auto;
-  }
-  .calendar {
-    width: 300px;
-    margin: auto;
-    border-color: rgb(100, 131, 192);
-    color: rgb(100, 131, 192);
-    font-size: 10px;
-  }
-  ​
-  a.register-button {
-    margin: 20px 0;
-    background: rgb(100, 131, 192);
-    line-height: 1.1;
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-    transition: all 0.2s ease-in;
-    font-family: "Martel Sans";
-    padding: 0.7em 3em;
-    margin-left: 900px;
-  }
-  ​
-  a.register-button:hover {
-    -webkit-filter: contrast(1.5);
-    filter: contrast(1.5);
-  }
-  ​
-  label.form-label {
-    color: var(--secondary-text);
-    font-weight: normal;
-    color: #fff;
-    font-weight: bold;
-  }
-  .register-form-container label.form-label {
-    color: var(--secondary-text);
-    font-weight: normal;
-    color: rgb(100, 131, 192);
-    font-weight: bold;
-  }
-  .forgot-password {
-    margin-top: -10px;
-    margin-left: 70px;
-  }
- .forgot-password a.forgotPasswordLink {
-    margin-top: 40px;
-    text-decoration: none;
-  }
-  .register-form-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .travel h3 {
-    color: rgb(231, 83, 83);
-    font-size: 15px;
-    margin-left: 400px;
-    font-weight: bold;
-  }
-  .login-form-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin-top: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+/* .login_form h1 {
+  font-family: "Martel Sans";
+  font-size: 3em;
+  margin-left: 120px;
+  margin-top: -70px;
+  color: rgb(100, 131, 192);
+  position: absolute;
+} */
+.log {
+  font-family: "Martel Sans";
+  font-size: 3em;
+  margin-left: 120px;
+  margin-top: -70px;
+  margin-bottom: 40px;
+  color: rgb(100, 131, 192);
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(60, 90, 243);
+}
+Form {
+  width: 80%;
+  margin: auto;
+}
+.calendar {
+  width: 300px;
+  margin: auto;
+  border-color: rgb(100, 131, 192);
+  color: rgb(100, 131, 192);
+  font-size: 10px;
+}
+
+​ ​ label.form-label {
+  color: var(--secondary-text);
+  font-weight: normal;
+  color: #fff;
+  font-weight: bold;
+}
+.register-form-container label.form-label {
+  color: var(--secondary-text);
+  font-weight: normal;
+  color: rgb(100, 131, 192);
+  font-weight: bold;
+}
+.forgot-password {
+  margin-top: 10px;
+  margin-left: 70px;
+  margin-bottom: 20px;
+}
+.forgot-password a.forgotPasswordLink {
+  margin-top: 40px;
+  text-decoration: none;
+}
+.register-form-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.travel h3 {
+  color: rgb(231, 83, 83);
+  font-size: 15px;
+  margin-left: 400px;
+  font-weight: bold;
+}
+.login_form {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
