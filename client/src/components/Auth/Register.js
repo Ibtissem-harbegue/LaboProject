@@ -92,7 +92,7 @@ import { register } from "../../Redux/actions/authActions";
         <option value="Travelling"  >Travelling</option>
       </Form.Control>
     </Form.Group>
-    <Form.Group as={Col} controlId="formGridPhone">
+    <Form.Group as={Col} controlId="formGridAge">
       <Form.Label>age</Form.Label>
       <Form.Control type="text" placeholder="Enter your age" onChange={handleChange}  name="age" />
     </Form.Group>
