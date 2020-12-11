@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'))
 }
 // routes
-app.use('/api',authRouter)
+app.use('/api/user',authRouter)
 
 // connect DB
 connectDB();
