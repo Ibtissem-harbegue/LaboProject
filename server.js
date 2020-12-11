@@ -6,11 +6,14 @@ const path =require("path")
 
 // pase data
 app.use(express.json());
-// routes
-app.use('/api',authRouter)
+
 
 // connect DB
 connectDB();
+
+// routes
+app.use('/api',authRouter)
+
 
 
 if (process.env.NODE_ENV === 'production'){
