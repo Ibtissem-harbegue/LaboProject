@@ -5,11 +5,17 @@ const authRouter = require("./routes/user");
 
 // pase data
 app.use(express.json());
+
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'))
+}
 // routes
 app.use('/api',authRouter)
 
 // connect DB
 connectDB();
+
+
 // run server
 const port = process.env.PORT || 4900;
 app.listen(port, (err) => {
