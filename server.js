@@ -6,10 +6,6 @@ const path =require("path")
 
 // pase data
 app.use(express.json());
-
-if (process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'));
-}
 // routes
 app.use('/api',authRouter)
 
@@ -17,8 +13,13 @@ app.use('/api',authRouter)
 connectDB();
 
 
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+}
+
 // run server
 const port = process.env.PORT || 4900;
 app.listen(port, (err) => {
   err ? console.log(err) : console.log(`the server is running on ${port}`);
 });
+
