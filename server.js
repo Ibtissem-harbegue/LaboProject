@@ -2,15 +2,16 @@ const express = require("express");
 const app = express();
 const connectDB = require("./config/connectDB");
 const authRouter = require("./routes/user");
+const path =require("path")
 
 // pase data
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'))
+  app.use(express.static('client/build'));
 }
 // routes
-app.use('/api/user',authRouter)
+app.use('/api',authRouter)
 
 // connect DB
 connectDB();
