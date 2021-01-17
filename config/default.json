@@ -1,4 +1,4 @@
 {
-    "MONGO_URI":"mongodb://Labo:Gh0dM#!r@cluster0-shard-00-00.ecirm.mongodb.net:27017,cluster0-shard-00-01.ecirm.mongodb.net:27017,cluster0-shard-00-02.ecirm.mongodb.net:27017/test?replicaSet=atlas-32qhjj-shard-0&ssl=true&authSource=admin",
+    "MONGO_URI":"mongodb+srv://Labo_cloud:labo123@cluster0.sez0t.mongodb.net/testdb",
     "secretOrKey":"hello it's me"
 }
