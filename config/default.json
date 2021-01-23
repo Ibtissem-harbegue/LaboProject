@@ -1,4 +1,4 @@
 {
-    "MONGO_URI":"mongodb+srv://Labo_cloud:labo123@cluster0.sez0t.mongodb.net/testdb",
+    "MONGO_URI":"",
     "secretOrKey":"hello it's me"
 }
